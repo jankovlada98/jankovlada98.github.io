@@ -1,19 +1,19 @@
 body {
-    background-color: #b3b3b3;
+    background-color: #fdfffc;
     scroll-behavior: smooth;
 }
 
 header {
     padding: 40px 0;
     position: sticky;
-    box-shadow: 0 8px 15px rgb(255, 239, 199);
+    box-shadow: 0 8px 15px #361d2e;
     top: 0;
     background-color: #999999;
     z-index: 1000;
 }
 
 h1 {
-    color: rgb(255, 239, 199);
+    color: #361d2e;
     text-shadow: 3px 3px rgb(0,0,0,.5);
     font-size: 60px;
     line-height: 72px;
@@ -22,15 +22,15 @@ h1 {
 h2 {
     font-size: 34px;
     line-height: 40px;
-    color: rgb(255, 239, 199);
+    color: #361d2e;
     margin: 20px 0 80px;
     text-transform: uppercase;
-    border-bottom: 2px solid rgb(255, 239, 199);
+    border-bottom: 2px solid #361d2e;
     text-shadow: 3px 3px rgb(0,0,0,.5);
 }
 
 h4 {
-    color: rgb(255, 239, 199);
+    color: #361d2e;
     text-transform: uppercase;
     text-shadow: 3px 3px rgb(0,0,0,.5);
     margin-bottom: 25px;
@@ -80,7 +80,7 @@ ul {
     font-size: 24px;
     line-height: 32px;
     font-weight: 700;
-    color: rgb(255, 239, 199);
+    color: #361d2e;
     text-shadow: 3px 3px rgb(0,0,0,0.3);
 }
 
@@ -98,7 +98,7 @@ ul {
     width: 150px;
     height: auto;
     border-radius: 70px;
-    box-shadow: 0 0 30px rgb(255, 239, 199);
+    box-shadow: 0 0 30px #361d2e;
 }
 
 .about-me-wrap p {
@@ -119,7 +119,7 @@ ul {
     font-size: 24px;
     line-height: 32px;
     font-weight: 700;
-    color: rgb(255, 239, 199);
+    color: #361d2e;
     text-shadow: 3px 3px rgb(0,0,0,0.3);
     display: flex;
     gap: 12px;
@@ -142,7 +142,7 @@ ul {
     width: fit-content;
     margin: 0 auto 80px;
     padding: 25px;
-    box-shadow: 0px 0px 50px rgb(255, 239, 199);
+    box-shadow: 0px 0px 50px #361d2e;
     border-radius: 50%;
     position: relative;
 }
@@ -172,7 +172,7 @@ ul {
     padding: 60px 0;
     background: rgb(0,0,0,.6);
     border-radius: 50%;
-    color: rgb(255, 239, 199);
+    color: #361d2e;
 }
 
 .education-wrap,
@@ -183,13 +183,13 @@ ul {
 
 .education-wrap {
     width: 50%;
-    border-right: 3px solid rgb(255, 239, 199);
+    border-right: 3px solid #361d2e;
     padding-top: 70px;
 }
 
 .work-wrap {
     width: calc(50% + 3px);
-    border-left: 3px solid rgb(255, 239, 199);
+    border-left: 3px solid #361d2e;
     margin-left: auto;
 }
 
@@ -204,12 +204,12 @@ ul {
 }
 
 .path-year {
-    color: rgb(255, 239, 199);
+    color: #361d2e;
     font-size: 30px;
     padding: 8px;
     position: absolute;
     background-color: #b3b3b3;
-    border: 3px solid rgb(255, 239, 199);
+    border: 3px solid #361d2e;
 }
 
 .education-wrap .path-year {
@@ -238,7 +238,7 @@ ul {
     border-radius: 50%;
     height: 7px;
     width: 7px;
-    background-color: rgb(255, 239, 199);
+    background-color: #361d2e;
     display: block;
     position: absolute;
     top: 7px;
@@ -253,14 +253,14 @@ ul {
     height: 0;
     width: 0;
     border: 20px solid transparent;
-    border-top: 20px solid rgb(255, 239, 199);
+    border-top: 20px solid #361d2e;
 }
 
 .single-project-wrap {
     max-width: 900px;
     width: 100%;
     margin: 0 auto 60px;
-    box-shadow: 0 0 30px rgb(255, 239, 199);
+    box-shadow: 0 0 30px #361d2e;
     border-radius: 30px;
     position: relative;
 
@@ -293,7 +293,7 @@ ul {
 }
 
 .link-wrap span {
-    color: rgb(255, 239, 199);
+    color: #361d2e;
     font-size: 50px;
     line-height: 62px;
     text-decoration: underline;
@@ -315,7 +315,7 @@ footer {
 }
 
 footer .made-by {
-    color: rgb(255, 239, 199);
+    color: #361d2e;
     text-shadow: 3px 3px rgb(0,0,0,.5);
     font-size: 18px;
     line-height: 24px;
