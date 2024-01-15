@@ -1,0 +1,341 @@
+body {
+    background-color: #b3b3b3;
+    scroll-behavior: smooth;
+}
+
+header {
+    padding: 40px 0;
+    position: sticky;
+    box-shadow: 0 8px 15px rgb(255, 239, 199);
+    top: 0;
+    background-color: #999999;
+    z-index: 1000;
+}
+
+h1 {
+    color: rgb(255, 239, 199);
+    text-shadow: 3px 3px rgb(0,0,0,.5);
+    font-size: 60px;
+    line-height: 72px;
+}
+
+h2 {
+    font-size: 34px;
+    line-height: 40px;
+    color: rgb(255, 239, 199);
+    margin: 20px 0 80px;
+    text-transform: uppercase;
+    border-bottom: 2px solid rgb(255, 239, 199);
+    text-shadow: 3px 3px rgb(0,0,0,.5);
+}
+
+h4 {
+    color: rgb(255, 239, 199);
+    text-transform: uppercase;
+    text-shadow: 3px 3px rgb(0,0,0,.5);
+    margin-bottom: 25px;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.center-text-align {
+    text-align: center;
+}
+
+#pathID,
+#projectsID,
+#technologiesID {
+    scroll-margin-top: 170px;
+    position: relative;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container ul li {
+    display: inline-block;
+    margin-left: 12px;
+}
+
+.header-container ul li:first-of-type {
+    margin-left: 0;
+}
+
+.header-container ul li a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    color: rgb(255, 239, 199);
+    text-shadow: 3px 3px rgb(0,0,0,0.3);
+}
+
+.header-container ul li a:hover {
+    opacity: .75;
+}
+
+.about-me .profile-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.about-me .profile-wrap img {
+    width: 150px;
+    height: auto;
+    border-radius: 70px;
+    box-shadow: 0 0 30px rgb(255, 239, 199);
+}
+
+.about-me-wrap p {
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    font-style: italic;
+    margin: 40px 120px;
+}
+
+.about-me-links {
+    margin: 100px 0;
+}
+
+.about-me-links a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    color: rgb(255, 239, 199);
+    text-shadow: 3px 3px rgb(0,0,0,0.3);
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.about-me-links a:hover {
+    opacity: .75;
+}
+
+.about-me-links img {
+    width: 24px;
+    height: auto;
+}
+
+.single-technology-wrap {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: fit-content;
+    margin: 0 auto 80px;
+    padding: 25px;
+    box-shadow: 0px 0px 50px rgb(255, 239, 199);
+    border-radius: 50%;
+    position: relative;
+}
+
+.single-technology-wrap .slika-tehnologije {
+    height: 100px;
+    width: 100px;
+    opacity: 1;
+}
+
+.single-technology-wrap:hover h3 {
+    opacity: 1;
+    transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out;
+    cursor: default;
+}
+
+.single-technology-wrap h3 {
+    font-size: 26px;
+    line-height: 30px;
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    top: calc(50% - 75px);
+    width: 150px;
+    padding: 60px 0;
+    background: rgb(0,0,0,.6);
+    border-radius: 50%;
+    color: rgb(255, 239, 199);
+}
+
+.education-wrap,
+.work-wrap {
+    position: relative;
+    padding: 50px 0;
+}
+
+.education-wrap {
+    width: 50%;
+    border-right: 3px solid rgb(255, 239, 199);
+    padding-top: 70px;
+}
+
+.work-wrap {
+    width: calc(50% + 3px);
+    border-left: 3px solid rgb(255, 239, 199);
+    margin-left: auto;
+}
+
+.content-wrap {
+    margin: 40px auto;
+    width: 80%;
+}
+
+.path-section,
+.projects-section {
+    margin-bottom: 80px;
+}
+
+.path-year {
+    color: rgb(255, 239, 199);
+    font-size: 30px;
+    padding: 8px;
+    position: absolute;
+    background-color: #b3b3b3;
+    border: 3px solid rgb(255, 239, 199);
+}
+
+.education-wrap .path-year {
+    right: -44px;
+    top: 20px;
+}
+
+.work-wrap .path-year {
+    left: -44px;
+    top: -30px;
+}
+
+.education-wrap ul li,
+.work-wrap ul li {
+    font-size: 18px;
+    font-style: italic;
+    line-height: 24px;
+    margin-bottom: 10px;
+    padding-left: 24px;
+    position: relative;
+}
+
+.education-wrap ul li:before,
+.work-wrap ul li:before {
+    content: '';
+    border-radius: 50%;
+    height: 7px;
+    width: 7px;
+    background-color: rgb(255, 239, 199);
+    display: block;
+    position: absolute;
+    top: 7px;
+    left: 0;
+}
+
+.path-arrow {
+    content: '';
+    position: absolute;
+    bottom: -22px;
+    left: -22px;
+    height: 0;
+    width: 0;
+    border: 20px solid transparent;
+    border-top: 20px solid rgb(255, 239, 199);
+}
+
+.single-project-wrap {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto 60px;
+    box-shadow: 0 0 30px rgb(255, 239, 199);
+    border-radius: 30px;
+    position: relative;
+
+    overflow: hidden;
+}
+
+.single-project-wrap:hover {
+    background: rgb(0,0,0,.7);
+    cursor: pointer;
+
+}
+
+.single-project-wrap img {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    transition: transform .5s;
+}
+
+.link-wrap {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    border-radius: 30px;
+    background: rgba(0,0,0,0.7);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-wrap span {
+    color: rgb(255, 239, 199);
+    font-size: 50px;
+    line-height: 62px;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.single-project-wrap:hover img {
+    transform: scale(1.3);
+}
+
+.single-project-wrap:hover .link-wrap {
+    opacity: 1;
+    transition: opacity .5s ease-in-out;
+}
+
+footer {
+    padding: 30px 0;
+    background-color: #666666;
+}
+
+footer .made-by {
+    color: rgb(255, 239, 199);
+    text-shadow: 3px 3px rgb(0,0,0,.5);
+    font-size: 18px;
+    line-height: 24px;
+}
+/*.animate__animated {*/
+/*    -webkit-animation-duration: 1s;*/
+/*    animation-duration: 1s;*/
+/*}*/
+
+/*.animate__fadeIn {*/
+/*    -webkit-animation-name: fadeIn;*/
+/*    animation-name: fadeIn;*/
+/*}*/
+
+/*@keyframes fadeIn {*/
+/*    0% {*/
+/*        opacity: 0;*/
+/*    }*/
+
+/*    100% {*/
+/*        opacity: 1;*/
+/*    }*/
+/*}*/
