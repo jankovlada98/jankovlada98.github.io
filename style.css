@@ -3,20 +3,24 @@ body {
     scroll-behavior: smooth;
 }
 
+body.overflow {
+    overflow: hidden;
+}
+
 header {
-    padding: 40px 0;
+    padding: 20px 0;
     position: sticky;
-    box-shadow: 0 8px 15px #361d2e;
+    box-shadow: 0 0 10px #361d2e;
     top: 0;
-    background-color: #999999;
+    background-color: #fdfffc;
     z-index: 1000;
 }
 
 h1 {
     color: #361d2e;
-    text-shadow: 3px 3px rgb(0,0,0,.5);
-    font-size: 60px;
-    line-height: 72px;
+    text-shadow: 3px 3px rgb(0,0,0,.2);
+    font-size: 40px;
+    line-height: 52px;
 }
 
 h2 {
@@ -26,13 +30,13 @@ h2 {
     margin: 20px 0 80px;
     text-transform: uppercase;
     border-bottom: 2px solid #361d2e;
-    text-shadow: 3px 3px rgb(0,0,0,.5);
+    text-shadow: 3px 3px rgb(0,0,0,.2);
 }
 
 h4 {
     color: #361d2e;
     text-transform: uppercase;
-    text-shadow: 3px 3px rgb(0,0,0,.5);
+    text-shadow: 3px 3px rgb(0,0,0,.2);
     margin-bottom: 25px;
     font-size: 20px;
     line-height: 24px;
@@ -52,11 +56,16 @@ ul {
     text-align: center;
 }
 
+#aboutMeID,
 #pathID,
 #projectsID,
 #technologiesID {
     scroll-margin-top: 170px;
     position: relative;
+}
+
+header .container {
+    max-width: calc(100% - 50px);
 }
 
 .header-container {
@@ -67,7 +76,7 @@ ul {
 
 .header-container ul li {
     display: inline-block;
-    margin-left: 12px;
+    margin-left: 20px;
 }
 
 .header-container ul li:first-of-type {
@@ -82,10 +91,81 @@ ul {
     font-weight: 700;
     color: #361d2e;
     text-shadow: 3px 3px rgb(0,0,0,0.3);
+    font-style: italic;
 }
 
 .header-container ul li a:hover {
     opacity: .75;
+}
+
+.main-menu {
+    display: none;
+}
+
+.mobile-menu-icon {
+    height: 40px;
+    width: 40px;
+    background-image: url("img/hamburger-menu-icon.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+}
+
+header.mobile-menu {
+    height: 100vh;
+    position: fixed;
+    width: 100% ;
+}
+
+header.mobile-menu .logo-wrap {
+    display: none;
+}
+
+header.mobile-menu .main-menu {
+    display: block;
+}
+
+header.mobile-menu .header-container {
+    flex-direction: column;
+    margin-top: 70px;
+}
+
+header.mobile-menu .header-container ul {
+    text-align: center;
+}
+
+header.mobile-menu .header-container ul li {
+    display: block;
+    margin-left: 0;
+    margin-bottom: 15px;
+}
+
+header.mobile-menu .header-container ul li a {
+    font-size: 40px;
+    line-height: 50px;
+    display: block;
+}
+
+header.mobile-menu .mobile-menu-icon {
+    position: absolute;
+    top: 30px;
+    right: 37px;
+    background-image: url("img/exit-menu-icon.svg");
+}
+
+header.mobile-menu .extra-link {
+    display: block;
+}
+
+footer.mobile-menu {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 10000;
+}
+
+.extra-link {
+    display: none;
 }
 
 .about-me .profile-wrap {
@@ -95,22 +175,23 @@ ul {
 }
 
 .about-me .profile-wrap img {
-    width: 150px;
+    width: 250px;
     height: auto;
     border-radius: 70px;
-    box-shadow: 0 0 30px #361d2e;
+    box-shadow: 0 0 10px #361d2e;
 }
 
 .about-me-wrap p {
-    font-size: 24px;
-    line-height: 36px;
+    font-size: 20px;
+    line-height: 26px;
     text-align: center;
     font-style: italic;
-    margin: 40px 120px;
+    margin: 40px 10px;
+    color: #361d2e;
 }
 
 .about-me-links {
-    margin: 100px 0;
+    margin: 20px 0 50px;
 }
 
 .about-me-links a {
@@ -124,6 +205,9 @@ ul {
     display: flex;
     gap: 12px;
     justify-content: center;
+    width: fit-content;
+    margin: 0 auto 15px;
+    font-style: italic;
 }
 
 .about-me-links a:hover {
@@ -135,21 +219,26 @@ ul {
     height: auto;
 }
 
+.technologies-wrap {
+    margin: 0 auto;
+    width: 90%;
+}
+
 .single-technology-wrap {
     display: flex;
     align-items: center;
     flex-direction: column;
     width: fit-content;
-    margin: 0 auto 80px;
-    padding: 25px;
-    box-shadow: 0px 0px 50px #361d2e;
+    margin: 0 auto 30px;
+    padding: 15px;
+    box-shadow: 0 0 8px #361d2e;
     border-radius: 50%;
     position: relative;
 }
 
 .single-technology-wrap .slika-tehnologije {
-    height: 100px;
-    width: 100px;
+    height: 45px;
+    width: 45px;
     opacity: 1;
 }
 
@@ -162,40 +251,55 @@ ul {
 }
 
 .single-technology-wrap h3 {
-    font-size: 26px;
-    line-height: 30px;
+    font-size: 20px;
+    line-height: 25px;
     margin: 0;
     opacity: 0;
     position: absolute;
-    top: calc(50% - 75px);
-    width: 150px;
-    padding: 60px 0;
+    top: calc(50% - 52.5px);
+    width: 105px;
+    padding: 40px 0;
     background: rgb(0,0,0,.6);
     border-radius: 50%;
-    color: #361d2e;
+    color: #fdfffc;
+    display: none;
 }
 
 .education-wrap,
 .work-wrap {
     position: relative;
-    padding: 50px 0;
-}
-
-.education-wrap {
-    width: 50%;
-    border-right: 3px solid #361d2e;
-    padding-top: 70px;
+    padding: 10px 0 87px;
 }
 
 .work-wrap {
-    width: calc(50% + 3px);
+    width: auto;
     border-left: 3px solid #361d2e;
-    margin-left: auto;
+    border-right: none;
+    margin-left: 50px;
+}
+
+.education-wrap {
+    width: auto;
+    border-left: 3px solid #361d2e;
+    margin-left: 50px;
 }
 
 .content-wrap {
-    margin: 40px auto;
-    width: 80%;
+    margin: 40px 0;
+    width: 100%;
+    padding: 20px 50px;
+    border: 3px solid;
+}
+
+.work-wrap .content-wrap {
+    border-left: none;
+    border-right: 3px solid;
+    border-radius: 0 20px 20px 0;
+}
+
+.education-wrap .content-wrap {
+    border-left: none;
+    border-radius: 0 20px 20px 0;
 }
 
 .path-section,
@@ -208,18 +312,19 @@ ul {
     font-size: 30px;
     padding: 8px;
     position: absolute;
-    background-color: #b3b3b3;
+    background-color: #fdfffc;
     border: 3px solid #361d2e;
 }
 
-.education-wrap .path-year {
-    right: -44px;
-    top: 20px;
+.work-wrap .path-year {
+    right: unset;
+    left: -44px;
+    bottom: 5px;
 }
 
-.work-wrap .path-year {
+.education-wrap .path-year {
     left: -44px;
-    top: -30px;
+    bottom: 30px;
 }
 
 .education-wrap ul li,
@@ -246,25 +351,28 @@ ul {
 }
 
 .path-arrow {
-    content: '';
     position: absolute;
-    bottom: -22px;
+    top: -30px;
+    right: unset;
     left: -22px;
     height: 0;
     width: 0;
     border: 20px solid transparent;
-    border-top: 20px solid #361d2e;
+    border-bottom: 20px solid #361d2e;
 }
 
 .single-project-wrap {
     max-width: 900px;
     width: 100%;
     margin: 0 auto 60px;
-    box-shadow: 0 0 30px #361d2e;
+    box-shadow: 0 0 10px #361d2e;
     border-radius: 30px;
     position: relative;
-
     overflow: hidden;
+}
+
+.single-project-wrap:last-of-type {
+    margin-bottom: 0;
 }
 
 .single-project-wrap:hover {
@@ -293,9 +401,9 @@ ul {
 }
 
 .link-wrap span {
-    color: #361d2e;
-    font-size: 50px;
-    line-height: 62px;
+    color: #fdfffc;
+    font-size: 28px;
+    line-height: 40px;
     text-decoration: underline;
     font-weight: 700;
 }
@@ -311,14 +419,137 @@ ul {
 
 footer {
     padding: 30px 0;
-    background-color: #666666;
+    background-color: #361d2e;
+}
+
+footer .about-me-links a {
+    color: #fdfffc;
 }
 
 footer .made-by {
-    color: #361d2e;
+    color: #fdfffc;
     text-shadow: 3px 3px rgb(0,0,0,.5);
     font-size: 18px;
     line-height: 24px;
+}
+
+@media only screen and (min-width: 430px) {
+    .single-technology-wrap {
+        margin: 0 auto 50px;
+        padding: 25px;
+    }
+
+    .single-technology-wrap .slika-tehnologije {
+        height: 55px;
+        width: 55px;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    .technologies-wrap {
+        width: 80%;
+    }
+
+    .single-technology-wrap h3 {
+        display: block;
+    }
+
+    .about-me-wrap p {
+        font-size: 24px;
+        line-height: 36px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .link-wrap span {
+        font-size: 40px;
+        line-height: 52px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    h1 {
+        font-size: 50px;
+        line-height: 64px;
+    }
+
+    .main-menu {
+        display: block;
+    }
+
+    .mobile-menu-icon {
+        display: none;
+    }
+
+    .technologies-wrap {
+        width: 70%;
+    }
+
+    .single-technology-wrap .slika-tehnologije {
+        height: 75px;
+        width: 75px;
+    }
+
+    .single-technology-wrap h3 {
+        top: calc(50% - 62.5px);
+        width: 125px;
+        padding: 50px 0;
+        font-size: 22px;
+    }
+
+    .link-wrap span {
+        font-size: 50px;
+        line-height: 62px;
+    }
+
+    .work-wrap {
+        width: 50%;
+        border-right: 3px solid #361d2e;
+        margin-left: 0;
+        border-left: none;
+    }
+
+    .education-wrap {
+        width: calc(50% + 3px);
+        margin-left: auto;
+    }
+
+    .work-wrap .path-year {
+        right: -44px;
+        left: unset;
+    }
+
+    .path-arrow {
+        right: -22px;
+        left: unset;
+    }
+
+    .work-wrap .content-wrap {
+        border-right: none;
+        border-left: 3px solid;
+        border-radius: 20px 0 0 20px;
+    }
+
+    .about-me-links{
+        margin: 50px 0 70px;
+    }
+
+    .about-me-wrap p {
+        margin: 40px 120px;
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+    .technologies-wrap {
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .technologies-wrap {
+        width: 50%;
+    }
 }
 /*.animate__animated {*/
 /*    -webkit-animation-duration: 1s;*/
