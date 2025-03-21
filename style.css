@@ -524,8 +524,8 @@ footer .made-by {
     }
 
     .path-arrow {
-        right: -22px;
-        left: unset;
+        left: -22px;
+        right: unset;
     }
 
     .work-wrap .content-wrap {
